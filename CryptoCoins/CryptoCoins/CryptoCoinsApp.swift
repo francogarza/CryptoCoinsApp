@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+/// The entry point of the CryptoCoins app.
+///
+/// Initializes and launches the main app view, which is managed by the coordinator.
 @main
 struct CryptoCoinsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorView()
         }
     }
 }

@@ -7,18 +7,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CoinListView: View {
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("CoinListView")
+            
+            Button {
+                coordinator.push(page: .detail)
+            } label: {
+                Text("move to detail")
+            }
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    CoinListView()
 }
