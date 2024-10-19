@@ -11,7 +11,6 @@ For this project, I will be adding several features to improve the software qual
 
 While I've read about these features, this will be my first time researching and applying them in a real project, which will improve the overall quality and maintainability of the app.
 
-
 ## Roadmap
 - **Project Setup**: 
   - [ ] Set up repository, SwiftLint, and project structure.
@@ -30,3 +29,6 @@ While I've read about these features, this will be my first time researching and
   - [ ] Write unit tests for all components during development.
   - [ ] Constantly ensure coding standards with SwiftLint. 
   - [ ] Add UI testing.
+  
+## Stretch Goals
+- **UserDefaults**: Implement a theme feature that allows users to toggle between light and dark mode, with their preference saved using UserDefaults.
