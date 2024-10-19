@@ -13,8 +13,8 @@ While I've read about these features, this will be my first time researching and
 
 ## Roadmap
 - **Project Setup**: 
-  - [ ] Set up repository, SwiftLint, and project structure.
-  - [ ] Implement Coordinator for navigation management.
+  - [x] Set up repository, SwiftLint, and project structure.
+  - [x] Implement Coordinator for navigation management.
   
 - **Core Functionality**:
   - [ ] Build the networking layer to fetch data from CoinGecko.
