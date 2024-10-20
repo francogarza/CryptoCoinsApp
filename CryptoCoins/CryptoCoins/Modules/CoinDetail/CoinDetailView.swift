@@ -9,6 +9,11 @@ import SwiftUI
 
 struct CoinDetailView: View {
     @EnvironmentObject private var coordinator: Coordinator
+    @StateObject private var viewModel: ViewModel
+    
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         Text("CoinDetailView")
@@ -16,5 +21,5 @@ struct CoinDetailView: View {
 }
 
 #Preview {
-    CoinDetailView()
+    CoinDetailView(viewModel: CoinDetailView.ViewModel(coinService: MockCoinNetworkService()))
 }

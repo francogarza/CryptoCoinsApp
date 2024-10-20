@@ -18,6 +18,13 @@ enum AppPages: Hashable {
 /// The `Coordinator` class is responsible for pushing and popping views in the navigation stack.
 /// It uses a `NavigationPath` to track the navigation state and supports building views based on the selected page.
 class Coordinator: ObservableObject {
+    private let networkManager: APIService
+    
+    /// Initializes the coordinator with a network manager.
+    /// - Parameter networkManager: The service responsible for managing network requests (defaults to `NetworkManager`).
+    init(networkManager: APIService = NetworkManager()) {
+        self.networkManager = networkManager
+    }
     
     /// Tracks the navigation path of the app.
     ///
@@ -47,13 +54,17 @@ class Coordinator: ObservableObject {
     ///
     /// - Parameter page: The `AppPages` enum representing the view to display.
     /// - Returns: A SwiftUI view corresponding to the given page.
-    @ViewBuilder
+    @MainActor @ViewBuilder
     func build(page: AppPages) -> some View {
         switch page {
         case .list:
-            CoinListView()
+            let coinService = CoinNetworkService(networkManager: networkManager)
+            let viewModel = CoinListView.ViewModel(coinService: coinService)
+            CoinListView(viewModel: viewModel)
         case .detail:
-            CoinDetailView()
+            let coinService = CoinNetworkService(networkManager: networkManager)
+            let viewModel = CoinDetailView.ViewModel(coinService: coinService)
+            CoinDetailView(viewModel: viewModel)
         }
     }
 }

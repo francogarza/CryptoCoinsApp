@@ -9,6 +9,11 @@ import SwiftUI
 
 struct CoinListView: View {
     @EnvironmentObject private var coordinator: Coordinator
+    @StateObject private var viewModel: ViewModel
+    
+    init(viewModel: ViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         VStack {
@@ -21,9 +26,12 @@ struct CoinListView: View {
             }
         }
         .padding()
+        .onAppear {
+            viewModel.viewDidAppear()
+        }
     }
 }
 
 #Preview {
-    CoinListView()
+    CoinListView(viewModel: CoinListView.ViewModel(coinService: MockCoinNetworkService()))
 }
