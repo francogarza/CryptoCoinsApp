@@ -17,7 +17,7 @@ While I've read about these features, this will be my first time researching and
   - [x] Implement Coordinator for navigation management.
   
 - **Core Functionality**:
-  - [ ] Build the networking layer to fetch data from CoinGecko.
+  - [x] Build the networking layer to fetch data from CoinGecko.
   - [ ] Create the Coin List UI with search functionality.
   - [ ] Implement navigation from the list to a detailed coin view.
   
