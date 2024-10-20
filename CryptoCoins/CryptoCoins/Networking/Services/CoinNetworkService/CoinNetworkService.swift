@@ -20,4 +20,10 @@ class CoinNetworkService: CoinService {
         let endpoint = CoinGeckoEndpoint.topCoins(vsCurrency: "usd", perPage: 20, page: 1)
         networkManager.performRequest(endpoint: endpoint, completion: completion)
     }
+    
+    /// - Parameter completion: A closure with either a `CoindDetail` or an error.
+    func fetchDetailForCoin(with id: String, completion: @escaping (Result<CoinDetail, Error>) -> Void) {
+        let endpoint = CoinGeckoEndpoint.coinDetail(coinId: id)
+        networkManager.performRequest(endpoint: endpoint, completion: completion)
+    }
 }

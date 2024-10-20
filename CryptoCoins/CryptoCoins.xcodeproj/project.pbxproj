@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E382AC72CC5B3930042FC74 /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E382AC62CC5B3930042FC74 /* CoinDetail.swift */; };
 		2E7AAFF12CC4958400764027 /* CoinNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF02CC4958400764027 /* CoinNetworkService.swift */; };
 		2E7AAFF52CC4966200764027 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF42CC4966200764027 /* NetworkError.swift */; };
 		2E7AAFF72CC4968100764027 /* CoinGeckoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF62CC4968100764027 /* CoinGeckoEndpoint.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E382AC62CC5B3930042FC74 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
 		2E7AAFF02CC4958400764027 /* CoinNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNetworkService.swift; sourceTree = "<group>"; };
 		2E7AAFF42CC4966200764027 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2E7AAFF62CC4968100764027 /* CoinGeckoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoEndpoint.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA60F2D2CC46B7300B480C5 /* Coin.swift */,
+				2E382AC62CC5B3930042FC74 /* CoinDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,8 +248,8 @@
 		2EA60F252CC46B2600B480C5 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				2EA60F2F2CC4723600B480C5 /* CoordinatorView.swift */,
 				2EA60F292CC46B3D00B480C5 /* Coordinator.swift */,
+				2EA60F2F2CC4723600B480C5 /* CoordinatorView.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7AB0042CC4A12E00764027 /* APIEndpoint.swift in Sources */,
+				2E382AC72CC5B3930042FC74 /* CoinDetail.swift in Sources */,
 				2E7AAFF12CC4958400764027 /* CoinNetworkService.swift in Sources */,
 				2E7AAFF72CC4968100764027 /* CoinGeckoEndpoint.swift in Sources */,
 				2EA60F2C2CC46B5A00B480C5 /* NetworkManager.swift in Sources */,

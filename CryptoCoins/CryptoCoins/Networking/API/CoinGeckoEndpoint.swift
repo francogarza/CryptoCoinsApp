@@ -9,8 +9,10 @@ import Foundation
 
 /// Enum representing CoinGecko API endpoints.
 /// - `topCoins`: Fetches the top coins with specific parameters.
+/// - `Coindetail`: Fetches the given coin's detail with specific parameters.
 enum CoinGeckoEndpoint: APIEndpoint {
     case topCoins(vsCurrency: String, perPage: Int, page: Int)
+    case coinDetail(coinId: String)
 
     var baseURL: String {
         return "https://api.coingecko.com/api/v3"
@@ -20,6 +22,8 @@ enum CoinGeckoEndpoint: APIEndpoint {
         switch self {
         case .topCoins:
             return "/coins/markets"
+        case .coinDetail(let coinID):
+            return "/coins/\(coinID)"
         }
     }
 
@@ -31,6 +35,8 @@ enum CoinGeckoEndpoint: APIEndpoint {
                 "per_page": "\(perPage)",
                 "page": "\(page)"
             ])
+        case .coinDetail:
+            return nil
         }
     }
 }

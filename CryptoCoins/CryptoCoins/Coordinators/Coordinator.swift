@@ -10,7 +10,7 @@ import SwiftUI
 /// Defines the possible navigation pages in the app.
 enum AppPages: Hashable {
     case list
-    case detail
+    case detailForCoinWith(id: String)
 }
 
 /// A coordinator that manages navigation flow throughout the app.
@@ -61,9 +61,9 @@ class Coordinator: ObservableObject {
             let coinService = CoinNetworkService(networkManager: networkManager)
             let viewModel = CoinListView.ViewModel(coinService: coinService)
             CoinListView(viewModel: viewModel)
-        case .detail:
+        case .detailForCoinWith(let id):
             let coinService = CoinNetworkService(networkManager: networkManager)
-            let viewModel = CoinDetailView.ViewModel(coinService: coinService)
+            let viewModel = CoinDetailView.ViewModel(coinService: coinService, coinId: id)
             CoinDetailView(viewModel: viewModel)
         }
     }
