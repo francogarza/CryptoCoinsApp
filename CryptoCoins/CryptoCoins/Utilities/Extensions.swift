@@ -18,3 +18,42 @@ extension URLQueryItem {
         }
     }
 }
+
+struct RobotoFontModifier: ViewModifier {
+    var size: CGFloat
+    var weight: FontWeight
+
+    enum FontWeight {
+        case regular
+        case bold
+        case light
+        case medium
+        case italic
+    }
+
+    private func robotoFontName(for weight: FontWeight) -> String {
+        switch weight {
+        case .regular:
+            return "Roboto-Regular"
+        case .bold:
+            return "Roboto-Bold"
+        case .light:
+            return "Roboto-Light"
+        case .medium:
+            return "Roboto-Medium"
+        case .italic:
+            return "Roboto-Italic"
+        }
+    }
+
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(robotoFontName(for: weight), size: size))
+    }
+}
+
+extension View {
+    func robotoFont(size: CGFloat, weight: RobotoFontModifier.FontWeight = .regular) -> some View {
+        self.modifier(RobotoFontModifier(size: size, weight: weight))
+    }
+}

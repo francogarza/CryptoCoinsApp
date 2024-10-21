@@ -16,10 +16,19 @@ struct CoinDetailView: View {
     }
     
     var body: some View {
-        Text("CoinDetailView")
+        VStack {
+            if let coinDetail = viewModel.coinDetail {
+                Text(coinDetail.name)
+            } else {
+                ProgressView()
+            }
+        }
+        .onAppear {
+            viewModel.viewDidAppear()
+        }
     }
 }
 
 #Preview {
-    CoinDetailView(viewModel: CoinDetailView.ViewModel(coinService: MockCoinNetworkService()))
+    CoinDetailView(viewModel: CoinDetailView.ViewModel(coinService: MockCoinNetworkService(), coinId: "bitcoin"))
 }
