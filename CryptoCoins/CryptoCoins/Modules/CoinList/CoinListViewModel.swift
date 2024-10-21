@@ -15,6 +15,8 @@ extension CoinListView {
                 searchCoins()
             }
         }
+        @Published var isLoading: Bool = true
+        @Published var isShowingNetworkError: Bool = false
         private var coins = [Coin]()
         private var coinService: CoinService
         
@@ -27,16 +29,20 @@ extension CoinListView {
         }
         
         func fetchCoins() {
+            isLoading = true
             coinService.fetchCoins { result in
-                switch result {
-                case .success(let coins):
-                    DispatchQueue.main.async { [weak self] in
-                        guard let self else { return }
+                DispatchQueue.main.async { [weak self] in
+                    guard let self else { return }
+                    switch result {
+                    case .success(let coins):
                         self.coins = coins
-                        self.filteredCoins = self.coins
+                        self.filteredCoins = coins
+                        isShowingNetworkError = false
+                    case .failure(let failure):
+                        isShowingNetworkError = true
+                        print(failure)
                     }
-                case .failure(let failure):
-                    print(failure)
+                    isLoading = false
                 }
             }
         }

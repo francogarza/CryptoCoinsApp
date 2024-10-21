@@ -13,6 +13,10 @@ import SwiftUI
 struct CoordinatorView: View {
     @StateObject private var coordinator = Coordinator()
     
+    init(coordinator: Coordinator = Coordinator()) {
+        _coordinator = StateObject(wrappedValue: coordinator)
+    }
+    
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             coordinator.build(page: .list)
