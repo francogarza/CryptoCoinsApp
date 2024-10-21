@@ -13,6 +13,7 @@ import Foundation
 enum CoinGeckoEndpoint: APIEndpoint {
     case topCoins(vsCurrency: String, perPage: Int, page: Int)
     case coinDetail(coinId: String)
+    case coinPriceHistory(vsCurrency: String, id: String, days: Int)
 
     var baseURL: String {
         return "https://api.coingecko.com/api/v3"
@@ -24,6 +25,8 @@ enum CoinGeckoEndpoint: APIEndpoint {
             return "/coins/markets"
         case .coinDetail(let coinID):
             return "/coins/\(coinID)"
+        case .coinPriceHistory(let vsCurrency, id: let id, days: let days):
+            return "/coins/\(id)/market_chart"
         }
     }
 
@@ -37,6 +40,12 @@ enum CoinGeckoEndpoint: APIEndpoint {
             ])
         case .coinDetail:
             return nil
+        case .coinPriceHistory(let vsCurrency, id: let id, days: let days):
+            return URLQueryItem.from(dictionary: [
+                "vs_currency": vsCurrency,
+                "id": id,
+                "days": "\(days)"
+            ])
         }
     }
 }
