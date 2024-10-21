@@ -46,6 +46,7 @@ extension CoinListView {
                     case .success(let coins):
                         self.coins = coins
                         self.filteredCoins = coins
+                        sortCoins()
                         isShowingNetworkError = false
                     case .failure(let failure):
                         isShowingNetworkError = true
