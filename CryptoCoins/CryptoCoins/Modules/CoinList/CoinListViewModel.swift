@@ -31,9 +31,6 @@ extension CoinListView {
         init(coinService: CoinService) {
             self.coinService = coinService
             sortOptions = [SortByRank(), SortByPrice(), SortByAlphabetically()]
-        }
-        
-        func viewDidAppear() {
             fetchCoins()
         }
         

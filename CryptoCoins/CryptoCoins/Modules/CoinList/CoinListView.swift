@@ -28,9 +28,6 @@ struct CoinListView: View {
                     self.dismissKeyboard()
                 }
         )
-        .onAppear {
-            viewModel.viewDidAppear()
-        }
     }
     
     var header: some View {
