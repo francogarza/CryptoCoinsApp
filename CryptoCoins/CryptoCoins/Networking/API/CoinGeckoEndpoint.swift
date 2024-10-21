@@ -25,7 +25,7 @@ enum CoinGeckoEndpoint: APIEndpoint {
             return "/coins/markets"
         case .coinDetail(let coinID):
             return "/coins/\(coinID)"
-        case .coinPriceHistory(let vsCurrency, id: let id, days: let days):
+        case .coinPriceHistory(_, let id, _):
             return "/coins/\(id)/market_chart"
         }
     }

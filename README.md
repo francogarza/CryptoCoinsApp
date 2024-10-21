@@ -18,12 +18,12 @@ While I've read about these features, this will be my first time researching and
   
 - **Core Functionality**:
   - [x] Build the networking layer to fetch data from CoinGecko.
-  - [ ] Create the Coin List UI with search functionality.
-  - [ ] Implement navigation from the list to a detailed coin view.
+  - [x] Create the Coin List UI with search functionality.
+  - [x] Implement navigation from the list to a detailed coin view.
   
 - **Coin Detail View**:
-  - [ ] Develop the detail view.
-  - [ ] Integrate Swift Charts to display price history.
+  - [x] Develop the detail view.
+  - [x] Integrate Swift Charts to display price history.
 
 - **Testing and Quality**:
   - [ ] Write unit tests for all components during development.

@@ -16,5 +16,7 @@ struct Coin: Identifiable, Decodable {
     let name: String
     let image: String
     let currentPrice: Double
+    let marketCap: Double
     let lastUpdated: String
+    let marketCapRank: Int
 }
