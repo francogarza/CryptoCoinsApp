@@ -39,6 +39,7 @@
 		2EA60F2C2CC46B5A00B480C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA60F2B2CC46B5A00B480C5 /* NetworkManager.swift */; };
 		2EA60F2E2CC46B7300B480C5 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA60F2D2CC46B7300B480C5 /* Coin.swift */; };
 		2EA60F302CC4723600B480C5 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA60F2F2CC4723600B480C5 /* CoordinatorView.swift */; };
+		2EC5ABE92CC70D4B00D25E23 /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5ABE82CC70D4B00D25E23 /* SortOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		2EA60F2B2CC46B5A00B480C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2EA60F2D2CC46B7300B480C5 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		2EA60F2F2CC4723600B480C5 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		2EC5ABE82CC70D4B00D25E23 /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				2EA60F2D2CC46B7300B480C5 /* Coin.swift */,
 				2E382AC62CC5B3930042FC74 /* CoinDetail.swift */,
 				2E382AE82CC60A3C0042FC74 /* PriceHistory.swift */,
+				2EC5ABE82CC70D4B00D25E23 /* SortOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				2EA60F1E2CC46AFE00B480C5 /* CoinListViewModel.swift in Sources */,
 				2E382AE92CC60A3C0042FC74 /* PriceHistory.swift in Sources */,
 				2E7AB0072CC4D2FD00764027 /* CoinService.swift in Sources */,
+				2EC5ABE92CC70D4B00D25E23 /* SortOption.swift in Sources */,
 				2E7AB0022CC4A11A00764027 /* Extensions.swift in Sources */,
 				2E7AAFF52CC4966200764027 /* NetworkError.swift in Sources */,
 				2EA60F2E2CC46B7300B480C5 /* Coin.swift in Sources */,

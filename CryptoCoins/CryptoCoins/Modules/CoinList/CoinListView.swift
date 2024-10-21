@@ -55,21 +55,6 @@ struct CoinListView: View {
         }
     }
     
-    var searchBar: some View {
-        Group {
-            if !viewModel.isShowingNetworkError {
-                TextField("Search for a coin", text: $viewModel.searchText)
-                    .robotoFont(size: 14, weight: .bold)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .background {
-                        RoundedRectangle(cornerRadius: 6)
-                            .foregroundStyle(Color(.systemGray6))
-                    }
-            }
-        }
-    }
-    
     var contentView: some View {
         Group {
             if !viewModel.isShowingNetworkError {
@@ -88,6 +73,8 @@ struct CoinListView: View {
         ScrollView {
             if !viewModel.filteredCoins.isEmpty {
                 LazyVStack(spacing: 20) {
+                    sortOptions
+                    
                     ForEach(viewModel.filteredCoins, id: \.id) { coin in
                         rowViewFor(coin)
                     }
@@ -107,6 +94,94 @@ struct CoinListView: View {
         }
         .refreshable {
             viewModel.fetchCoins()
+        }
+    }
+    
+    var sortOptions: some View {
+        HStack(spacing: 10) {
+            Text("Sort by: ")
+                .robotoFont(size: 14, weight: .bold)
+                .foregroundStyle(Color(.textSecondary))
+            
+            ScrollView(.horizontal) {
+                HStack(spacing: 10) {
+                    ForEach(viewModel.sortOptions, id: \.type) { sort in
+                        viewFor(sort)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 5)
+    }
+}
+
+private extension CoinListView {
+    var searchBar: some View {
+        Group {
+            if !viewModel.isShowingNetworkError {
+                TextField("Search for a coin", text: $viewModel.searchText)
+                    .robotoFont(size: 14, weight: .bold)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background {
+                        RoundedRectangle(cornerRadius: 6)
+                            .foregroundStyle(Color(.systemGray6))
+                    }
+            }
+        }
+    }
+    
+    func viewFor(_ sort: SortOption) -> some View {
+        Group {
+            if sort.order == .unselected {
+                viewForUnselected(sort)
+            } else {
+                viewForSelected(sort)
+            }
+        }
+    }
+    
+    func viewForUnselected(_ sort: SortOption) -> some View {
+        HStack(spacing: 10) {
+            Text(sort.title)
+                .robotoFont(size: 14, weight: .medium)
+                .fixedSize(horizontal: true, vertical: false)
+        }
+        .foregroundStyle(Color(.textSecondary))
+        .padding(.vertical, 5)
+        .padding(.horizontal, 10)
+        .overlay {
+            RoundedRectangle(cornerRadius: 8)
+                .strokeBorder(lineWidth: 2)
+                .foregroundStyle(Color(.textSecondary))
+        }
+        .onTapGesture {
+            viewModel.didTap(sort)
+        }
+    }
+    
+    func viewForSelected(_ sort: SortOption) -> some View {
+        HStack(spacing: 10) {
+            Text(sort.title)
+                .robotoFont(size: 14, weight: .bold)
+                .fixedSize(horizontal: true, vertical: false)
+            if sort.order == .descending {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 12, weight: .bold))
+            } else if sort.order == .ascending {
+                Image(systemName: "chevron.up")
+                    .font(.system(size: 12, weight: .bold))
+            }
+        }
+        .foregroundStyle(.white)
+        .padding(.vertical, 5)
+        .padding(.horizontal, 10)
+        .background {
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundStyle(.accent.opacity(0.8))
+        }
+        .onTapGesture {
+            viewModel.didTap(sort)
         }
     }
     

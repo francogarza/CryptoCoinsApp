@@ -15,7 +15,7 @@ struct CoinDetail: Identifiable, Decodable {
     
     var marketCap: String { marketData.marketCap.usd.formattedAsShortCurrency() }
     var totalVolume: String { marketData.totalVolume.usd.formattedAsCurrency() }
-    var high24H: String { marketData.high24H.formattedAsShortCurrency() }
+    var high24H: String { marketData.high24H.usd.formattedAsShortCurrency() }
     var low24H: String { marketData.low24H.usd.formattedAsShortCurrency() }
     var priceChange24H: String { marketData.priceChange24H.formattedAsShortCurrency() }
     
