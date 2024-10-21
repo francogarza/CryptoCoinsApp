@@ -22,6 +22,12 @@ struct CoinListView: View {
             
             contentView
         }
+        .simultaneousGesture(
+            TapGesture()
+                .onEnded { _ in
+                    self.dismissKeyboard()
+                }
+        )
         .onAppear {
             viewModel.viewDidAppear()
         }
@@ -263,6 +269,10 @@ private extension CoinListView {
             }
             .cardViewStyle(horizontalInset: 20, verticalInset: 15)
         }
+    }
+    
+    private func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
