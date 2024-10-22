@@ -189,8 +189,14 @@ extension Double {
         let thousand = number / 1_000
         
         let formatter = NumberFormatter()
-        formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
+        formatter.numberStyle = .decimal
+        
+        if number < 1.0 && number > 0 {
+            formatter.maximumFractionDigits = 6
+        } else {
+            formatter.maximumFractionDigits = 2
+        }
         
         if trillion >= 1.0 {
             return "$\(formatter.string(from: NSNumber(value: trillion)) ?? "0") T"
@@ -200,16 +206,20 @@ extension Double {
             return "$\(formatter.string(from: NSNumber(value: million)) ?? "0") M"
         } else if thousand >= 1.0 {
             return "$\(formatter.string(from: NSNumber(value: thousand)) ?? "0") K"
+        } else if number < 1.0 && number > 0 {
+            // Handle values below 1 with up to 6 decimal places
+            return "$\(formatter.string(from: NSNumber(value: self)) ?? "0")"
         } else {
+            // Handle regular cases for values >= 1
             return "$\(formatter.string(from: NSNumber(value: self)) ?? "0")"
         }
     }
-    
+
     func formattedAsCurrency() -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencySymbol = "$"
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = 6
         formatter.minimumFractionDigits = 2
         formatter.groupingSeparator = ","
         
@@ -217,7 +227,6 @@ extension Double {
         return formatter.string(from: number) ?? "\(self)"
     }
 }
-
 // MARK: URLQueryItem
 extension URLQueryItem {
     /// Converts a dictionary to an array of query items.

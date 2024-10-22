@@ -74,7 +74,5 @@ final class CoinListViewUITests: XCTestCase {
         let coinListsViewTitleExists = app.staticTexts["Crypto Coins"].exists
         
         XCTAssertTrue(coinListsViewTitleExists, "Expected to see Coin List Title text but did not find it")
-        
-        
     }
 }
