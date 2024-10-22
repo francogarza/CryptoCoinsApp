@@ -22,9 +22,9 @@ extension CoinListView {
                 sortCoins()
             }
         }
-        private var coins = [Coin]()
+        private(set) var coins = [Coin]()
         private var coinService: CoinService
-        private var selectedSort: SortOption? {
+        var selectedSort: SortOption? {
             return sortOptions.first(where: { $0.order != .unselected })
         }
         
@@ -64,7 +64,6 @@ extension CoinListView {
             }
         }
         
-        // Filter coins based on search text
         func searchCoins() {
             if searchText.isEmpty {
                 filteredCoins = coins

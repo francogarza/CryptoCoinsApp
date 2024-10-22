@@ -56,13 +56,18 @@ class Coordinator: ObservableObject {
     /// - Returns: A SwiftUI view corresponding to the given page.
     @MainActor @ViewBuilder
     func build(page: AppPages) -> some View {
+        let coinService: CoinService = {
+            if ProcessInfo.processInfo.environment["QA_ENVIRONMENT"] == "true" {
+                return MockCoinNetworkService(urlString: "Mock")
+            } else {
+                return CoinNetworkService(networkManager: networkManager)
+            }
+        }()
         switch page {
         case .list:
-            let coinService = CoinNetworkService(networkManager: networkManager)
             let viewModel = CoinListView.ViewModel(coinService: coinService)
             CoinListView(viewModel: viewModel)
         case .detailForCoinWith(let id):
-            let coinService = CoinNetworkService(networkManager: networkManager)
             let viewModel = CoinDetailView.ViewModel(coinService: coinService, coinId: id)
             CoinDetailView(viewModel: viewModel)
         }

@@ -20,7 +20,7 @@ class MockCoinNetworkService: CoinService {
     
     /// - Parameter completion: A closure returning mock `Coin` data or an error.
     func fetchCoins(completion: @escaping (Result<[Coin], Error>) -> Void) {
-        guard let url = Bundle.main.url(forResource: urlString, withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "\(urlString)_CoinsResponse", withExtension: "json") else {
             print("Failed to find \(urlString) in the bundle.")
             completion(.failure(URLError(.badURL)))
             return
@@ -33,7 +33,7 @@ class MockCoinNetworkService: CoinService {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let coins = try decoder.decode([Coin].self, from: data)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 self?.coins = coins
                 completion(.success(coins))
             }
@@ -44,7 +44,7 @@ class MockCoinNetworkService: CoinService {
     }
     
     func fetchDetailForCoin(with id: String, completion: @escaping (Result<CoinDetail, Error>) -> Void) {
-        guard let url = Bundle.main.url(forResource: urlString, withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "\(urlString)_CoinDetailResponse", withExtension: "json") else {
             print("Failed to find MockCoinDetailResponse.json in the bundle.")
             completion(.failure(URLError(.badURL)))
             return
@@ -57,7 +57,7 @@ class MockCoinNetworkService: CoinService {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let coinDetail = try decoder.decode(CoinDetail.self, from: data)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 self?.coinDetail = coinDetail
                 completion(.success(coinDetail))
             }
@@ -68,7 +68,7 @@ class MockCoinNetworkService: CoinService {
     }
     
     func fetchPriceHistoryForCoin(with id: String, completion: @escaping (Result<PriceHistory, Error>) -> Void) {
-        guard let url = Bundle.main.url(forResource: "\(urlString)_PriceHistory", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "\(urlString)_CoinDetailResponse_PriceHistory", withExtension: "json") else {
             print("Failed to find MockCoinPriceHistory.json in the bundle.")
             completion(.failure(URLError(.badURL)))
             return
@@ -81,7 +81,7 @@ class MockCoinNetworkService: CoinService {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let priceHistory = try decoder.decode(PriceHistory.self, from: data)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 completion(.success(priceHistory))
             }
         } catch {

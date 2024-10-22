@@ -10,17 +10,13 @@ import XCTest
 
 final class MockCoinNetworkServiceTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    override func setUpWithError() throws { }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDownWithError() throws { }
     
     func test_MockCoinDataService_fetchCoins_doesReturnValues() {
         // Given
-        let dataService = MockCoinNetworkService(urlString: "MockCoinsResponse")
+        let dataService = MockCoinNetworkService(urlString: "Mock")
         
         // When
         var items: [Coin] = []
@@ -67,7 +63,7 @@ final class MockCoinNetworkServiceTests: XCTestCase {
     
     func test_MockCoinDataService_fetchCoinDetail_doesReturnValues() {
         // Given
-        let dataService = MockCoinNetworkService(urlString: "MockCoinDetailResponse")
+        let dataService = MockCoinNetworkService(urlString: "Mock")
         
         // When
         var coinDetail: CoinDetail?
