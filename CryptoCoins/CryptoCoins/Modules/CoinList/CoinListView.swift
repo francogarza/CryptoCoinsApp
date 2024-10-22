@@ -226,11 +226,16 @@ private extension CoinListView {
             coordinator.push(page: .detailForCoinWith(id: coin.id))
         } label: {
             HStack(spacing: 0) {
-                Text(String(coin.marketCapRank))
-                    .robotoFont(size: 12)
-                    .foregroundStyle(Color.textSecondary)
-                    .lineLimit(1)
-                    .frame(width: 14, alignment: .leading)
+                ZStack {
+                    Text("00")
+                        .robotoFont(size: 12)
+                        .foregroundStyle(.clear)
+                        .lineLimit(1)
+                    Text(String(coin.marketCapRank))
+                        .robotoFont(size: 12)
+                        .foregroundStyle(Color.textSecondary)
+                        .lineLimit(1)
+                }
                 
                 Image.loadFrom(urlString: coin.image)
                     .frame(width: 25, height: 25)
@@ -244,7 +249,7 @@ private extension CoinListView {
                     .padding(.horizontal, 15)
                 
                 VStack(spacing: 5) {
-                    Text(coin.symbol.uppercased())
+                    Text(coin.name)
                         .robotoFont(size: 14, weight: .bold)
                         .foregroundStyle(Color.text)
                         .frame(maxWidth: .infinity, alignment: .leading)
