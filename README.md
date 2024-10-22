@@ -2,9 +2,7 @@
 
 An app for browsing the top crypto coins' current market value.
 
-![screenshot 1](./images/screenshot1.png)
-![screenshot 2](./images/screenshot2.png)
-![screenshot 3](./images/screenshot3.png)
+<img src="images/screenshot1.png" alt="screenshot1" width="300"> <img src="images/screenshot2.png" alt="screenshot1" width="300"> <img src="images/screenshot3.png" alt="screenshot1" width="300">
 
 ## Project Enhancements
 For this project, I am adding several features to improve software quality and expand my skills:
