@@ -62,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2D58762CC80D760088333B /* CryptoCoins.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CryptoCoins.xctestplan; sourceTree = "<group>"; };
 		2E382AC62CC5B3930042FC74 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
 		2E382ACA2CC5CFCD0042FC74 /* Mock_CoinsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mock_CoinsResponse.json; sourceTree = "<group>"; };
 		2E382ACC2CC5D5630042FC74 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 				2EA60EE22CC453DE00B480C5 /* CryptoCoins */,
 				2EA60EF32CC453DF00B480C5 /* CryptoCoinsTests */,
 				2EA60EFD2CC453DF00B480C5 /* CryptoCoinsUITests */,
+				2E2D58762CC80D760088333B /* CryptoCoins.xctestplan */,
 				2EA60EE12CC453DE00B480C5 /* Products */,
 			);
 			sourceTree = "<group>";

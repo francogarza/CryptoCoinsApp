@@ -9,33 +9,27 @@ import XCTest
 
 final class CoinListViewUITests: XCTestCase {
     
+    var app: XCUIApplication?
+    
     override func setUpWithError() throws {
         continueAfterFailure = false
         
-        // Set up the app instance
-        let app = XCUIApplication()
-
-        // Pass any required launch arguments
-        app.launchArguments.append("--reset-app-state")
+        app = XCUIApplication()
         
-        // Pass the environment variable for QA
+        guard let app else { return }
+        
         app.launchEnvironment["QA_ENVIRONMENT"] = "true"
         
-        // Launch the app
         app.launch()
-        
-        // Ensure we are in the QA environment
-        guard ProcessInfo.processInfo.environment["QA_ENVIRONMENT"] == "true" else {
-            throw XCTSkip("Skipping test as it's not running in QA environment")
-        }
     }
     
     override func tearDownWithError() throws {
+        app = nil
     }
     
     func test_CoinListView_navigationToDetail_shouldPresentDetail() {
         // Given
-        let app = XCUIApplication()
+        guard let app else { return }
 
         let coinListNavBarTitle = app.staticTexts["Crypto Coins"]
         XCTAssertTrue(coinListNavBarTitle.exists, "Expected to see Crypto Coins text but did not find it")
@@ -53,9 +47,9 @@ final class CoinListViewUITests: XCTestCase {
     }
     
     func test_CoinListView_navigationBackToHome_shouldReturn() {
+        guard let app else { return }
+        
         // Given
-        let app = XCUIApplication()
-
         let coinListNavBarTitle = app.staticTexts["Crypto Coins"]
         XCTAssertTrue(coinListNavBarTitle.exists, "Expected to see Crypto Coins text but did not find it")
         
