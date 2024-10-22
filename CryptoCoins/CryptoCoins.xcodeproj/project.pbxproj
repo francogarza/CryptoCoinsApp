@@ -15,10 +15,10 @@
 		2E382ADD2CC5D84F0042FC74 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AD02CC5D5630042FC74 /* Roboto-Medium.ttf */; };
 		2E382ADE2CC5D84F0042FC74 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382ACC2CC5D5630042FC74 /* Roboto-Regular.ttf */; };
 		2E382AE32CC5F2A20042FC74 /* MockCoinDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE22CC5F2A20042FC74 /* MockCoinDetailResponse.json */; };
-		2E382AE72CC6091D0042FC74 /* MockCoinPriceHistory.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE62CC6091D0042FC74 /* MockCoinPriceHistory.json */; };
+		2E382AE72CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE62CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json */; };
 		2E382AE92CC60A3C0042FC74 /* PriceHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E382AE82CC60A3C0042FC74 /* PriceHistory.swift */; };
+		2E636AC02CC74E380096777C /* MockCoinNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */; };
 		2E7AAFF12CC4958400764027 /* CoinNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF02CC4958400764027 /* CoinNetworkService.swift */; };
-		2E7AAFF52CC4966200764027 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF42CC4966200764027 /* NetworkError.swift */; };
 		2E7AAFF72CC4968100764027 /* CoinGeckoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF62CC4968100764027 /* CoinGeckoEndpoint.swift */; };
 		2E7AAFFB2CC4969D00764027 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFFA2CC4969D00764027 /* APIService.swift */; };
 		2E7AB0002CC496BD00764027 /* MockCoinNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFFF2CC496BD00764027 /* MockCoinNetworkService.swift */; };
@@ -68,10 +68,10 @@
 		2E382AD52CC5D5630042FC74 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		2E382AD72CC5D5630042FC74 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		2E382AE22CC5F2A20042FC74 /* MockCoinDetailResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCoinDetailResponse.json; sourceTree = "<group>"; };
-		2E382AE62CC6091D0042FC74 /* MockCoinPriceHistory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCoinPriceHistory.json; sourceTree = "<group>"; };
+		2E382AE62CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCoinDetailResponse_PriceHistory.json; sourceTree = "<group>"; };
 		2E382AE82CC60A3C0042FC74 /* PriceHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHistory.swift; sourceTree = "<group>"; };
+		2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCoinNetworkServiceTests.swift; sourceTree = "<group>"; };
 		2E7AAFF02CC4958400764027 /* CoinNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNetworkService.swift; sourceTree = "<group>"; };
-		2E7AAFF42CC4966200764027 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2E7AAFF62CC4968100764027 /* CoinGeckoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoEndpoint.swift; sourceTree = "<group>"; };
 		2E7AAFFA2CC4969D00764027 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		2E7AAFFF2CC496BD00764027 /* MockCoinNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinNetworkService.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 			children = (
 				2E382ACA2CC5CFCD0042FC74 /* MockCoinsResponse.json */,
 				2E382AE22CC5F2A20042FC74 /* MockCoinDetailResponse.json */,
-				2E382AE62CC6091D0042FC74 /* MockCoinPriceHistory.json */,
+				2E382AE62CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json */,
 				2EA60EEA2CC453DF00B480C5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -214,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA60EF42CC453DF00B480C5 /* CryptoCoinsTests.swift */,
+				2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */,
 			);
 			path = CryptoCoinsTests;
 			sourceTree = "<group>";
@@ -295,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				2E382AD82CC5D5670042FC74 /* Roboto Font */,
-				2E7AAFF42CC4966200764027 /* NetworkError.swift */,
 				2E7AB0012CC4A11A00764027 /* Extensions.swift */,
 			);
 			path = Utilities;
@@ -413,7 +413,7 @@
 				2E382ADD2CC5D84F0042FC74 /* Roboto-Medium.ttf in Resources */,
 				2E382ADE2CC5D84F0042FC74 /* Roboto-Regular.ttf in Resources */,
 				2EA60EEB2CC453DF00B480C5 /* Preview Assets.xcassets in Resources */,
-				2E382AE72CC6091D0042FC74 /* MockCoinPriceHistory.json in Resources */,
+				2E382AE72CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json in Resources */,
 				2E382ACB2CC5CFCD0042FC74 /* MockCoinsResponse.json in Resources */,
 				2EA60EE82CC453DF00B480C5 /* Assets.xcassets in Resources */,
 			);
@@ -481,7 +481,6 @@
 				2E7AB0072CC4D2FD00764027 /* CoinService.swift in Sources */,
 				2EC5ABE92CC70D4B00D25E23 /* SortOption.swift in Sources */,
 				2E7AB0022CC4A11A00764027 /* Extensions.swift in Sources */,
-				2E7AAFF52CC4966200764027 /* NetworkError.swift in Sources */,
 				2EA60F2E2CC46B7300B480C5 /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA60EF52CC453DF00B480C5 /* CryptoCoinsTests.swift in Sources */,
+				2E636AC02CC74E380096777C /* MockCoinNetworkServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

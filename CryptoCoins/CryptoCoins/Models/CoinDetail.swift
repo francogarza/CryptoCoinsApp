@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoinDetail: Identifiable, Decodable {
+struct CoinDetail: Equatable, Identifiable, Decodable {
     let id: String
     let name: String
     let image: Image
@@ -18,8 +18,10 @@ struct CoinDetail: Identifiable, Decodable {
     var high24H: String { marketData.high24H.usd.formattedAsShortCurrency() }
     var low24H: String { marketData.low24H.usd.formattedAsShortCurrency() }
     var priceChange24H: String { marketData.priceChange24H.formattedAsShortCurrency() }
+    var currentPrice: String { marketData.currentPrice.usd.formattedAsShortCurrency() }
     
-    struct MarketData: Decodable {
+    struct MarketData: Equatable, Decodable {
+        let currentPrice: PriceByCurrency
         let marketCap: PriceByCurrency
         let totalVolume: PriceByCurrency
         let high24H: PriceByCurrency
@@ -27,11 +29,11 @@ struct CoinDetail: Identifiable, Decodable {
         let priceChange24H: Double
     }
     
-    struct PriceByCurrency: Decodable {
+    struct PriceByCurrency: Equatable, Decodable {
         let usd: Double
     }
     
-    struct Image: Decodable {
+    struct Image: Equatable, Decodable {
         let large: String
     }
 }

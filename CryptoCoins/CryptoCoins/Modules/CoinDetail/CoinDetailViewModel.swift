@@ -45,7 +45,6 @@ extension CoinDetailView {
         }
         
         func fetchGraph() {
-            isLoading = true
             coinService.fetchPriceHistoryForCoin(with: coinId) { result in
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
@@ -57,7 +56,6 @@ extension CoinDetailView {
                         print(failure)
                         isShowingNetworkError = true
                     }
-                    isLoading = false
                 }
             }
         }

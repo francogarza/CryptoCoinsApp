@@ -135,6 +135,7 @@ struct CoinDetailView: View {
                 }
                 
                 detailWith(title: "Total Volume", description: coinDetail.totalVolume)
+                detailWith(title: "Current Price", description: coinDetail.currentPrice)
             }
         }
     }
@@ -245,6 +246,6 @@ struct CoinDetailView: View {
 }
 
 #Preview {
-    CoinDetailView(viewModel: CoinDetailView.ViewModel(coinService: MockCoinNetworkService(), coinId: ""))
+    CoinDetailView(viewModel: CoinDetailView.ViewModel(coinService: MockCoinNetworkService(urlString: "MockCoinDetailResponse"), coinId: ""))
         .environmentObject(Coordinator())
 }
