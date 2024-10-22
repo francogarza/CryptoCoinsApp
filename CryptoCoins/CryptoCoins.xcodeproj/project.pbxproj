@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2E382AC72CC5B3930042FC74 /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E382AC62CC5B3930042FC74 /* CoinDetail.swift */; };
-		2E382ACB2CC5CFCD0042FC74 /* MockCoinsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382ACA2CC5CFCD0042FC74 /* MockCoinsResponse.json */; };
+		2E382ACB2CC5CFCD0042FC74 /* Mock_CoinsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382ACA2CC5CFCD0042FC74 /* Mock_CoinsResponse.json */; };
 		2E382ADA2CC5D84F0042FC74 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AD52CC5D5630042FC74 /* Roboto-Bold.ttf */; };
 		2E382ADB2CC5D84F0042FC74 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AD72CC5D5630042FC74 /* Roboto-Italic.ttf */; };
 		2E382ADC2CC5D84F0042FC74 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382ACD2CC5D5630042FC74 /* Roboto-Light.ttf */; };
 		2E382ADD2CC5D84F0042FC74 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AD02CC5D5630042FC74 /* Roboto-Medium.ttf */; };
 		2E382ADE2CC5D84F0042FC74 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E382ACC2CC5D5630042FC74 /* Roboto-Regular.ttf */; };
-		2E382AE32CC5F2A20042FC74 /* MockCoinDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE22CC5F2A20042FC74 /* MockCoinDetailResponse.json */; };
-		2E382AE72CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE62CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json */; };
+		2E382AE32CC5F2A20042FC74 /* Mock_CoinDetailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE22CC5F2A20042FC74 /* Mock_CoinDetailResponse.json */; };
+		2E382AE72CC6091D0042FC74 /* Mock_CoinDetailResponse_PriceHistory.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E382AE62CC6091D0042FC74 /* Mock_CoinDetailResponse_PriceHistory.json */; };
 		2E382AE92CC60A3C0042FC74 /* PriceHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E382AE82CC60A3C0042FC74 /* PriceHistory.swift */; };
 		2E636AC02CC74E380096777C /* MockCoinNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */; };
+		2E6FFDA72CC7CF1D000272F0 /* CoinListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FFDA62CC7CF1D000272F0 /* CoinListViewModelTests.swift */; };
+		2E6FFDA92CC7D3EA000272F0 /* CoinListView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FFDA82CC7D3EA000272F0 /* CoinListView_UITests.swift */; };
 		2E7AAFF12CC4958400764027 /* CoinNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF02CC4958400764027 /* CoinNetworkService.swift */; };
 		2E7AAFF72CC4968100764027 /* CoinGeckoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFF62CC4968100764027 /* CoinGeckoEndpoint.swift */; };
 		2E7AAFFB2CC4969D00764027 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AAFFA2CC4969D00764027 /* APIService.swift */; };
@@ -61,16 +63,18 @@
 
 /* Begin PBXFileReference section */
 		2E382AC62CC5B3930042FC74 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
-		2E382ACA2CC5CFCD0042FC74 /* MockCoinsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCoinsResponse.json; sourceTree = "<group>"; };
+		2E382ACA2CC5CFCD0042FC74 /* Mock_CoinsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mock_CoinsResponse.json; sourceTree = "<group>"; };
 		2E382ACC2CC5D5630042FC74 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		2E382ACD2CC5D5630042FC74 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		2E382AD02CC5D5630042FC74 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		2E382AD52CC5D5630042FC74 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		2E382AD72CC5D5630042FC74 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		2E382AE22CC5F2A20042FC74 /* MockCoinDetailResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCoinDetailResponse.json; sourceTree = "<group>"; };
-		2E382AE62CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCoinDetailResponse_PriceHistory.json; sourceTree = "<group>"; };
+		2E382AE22CC5F2A20042FC74 /* Mock_CoinDetailResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mock_CoinDetailResponse.json; sourceTree = "<group>"; };
+		2E382AE62CC6091D0042FC74 /* Mock_CoinDetailResponse_PriceHistory.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mock_CoinDetailResponse_PriceHistory.json; sourceTree = "<group>"; };
 		2E382AE82CC60A3C0042FC74 /* PriceHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHistory.swift; sourceTree = "<group>"; };
 		2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCoinNetworkServiceTests.swift; sourceTree = "<group>"; };
+		2E6FFDA62CC7CF1D000272F0 /* CoinListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModelTests.swift; sourceTree = "<group>"; };
+		2E6FFDA82CC7D3EA000272F0 /* CoinListView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView_UITests.swift; sourceTree = "<group>"; };
 		2E7AAFF02CC4958400764027 /* CoinNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNetworkService.swift; sourceTree = "<group>"; };
 		2E7AAFF62CC4968100764027 /* CoinGeckoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGeckoEndpoint.swift; sourceTree = "<group>"; };
 		2E7AAFFA2CC4969D00764027 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -202,9 +206,9 @@
 		2EA60EE92CC453DF00B480C5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2E382ACA2CC5CFCD0042FC74 /* MockCoinsResponse.json */,
-				2E382AE22CC5F2A20042FC74 /* MockCoinDetailResponse.json */,
-				2E382AE62CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json */,
+				2E382ACA2CC5CFCD0042FC74 /* Mock_CoinsResponse.json */,
+				2E382AE22CC5F2A20042FC74 /* Mock_CoinDetailResponse.json */,
+				2E382AE62CC6091D0042FC74 /* Mock_CoinDetailResponse_PriceHistory.json */,
 				2EA60EEA2CC453DF00B480C5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA60EF42CC453DF00B480C5 /* CryptoCoinsTests.swift */,
+				2E6FFDA62CC7CF1D000272F0 /* CoinListViewModelTests.swift */,
 				2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */,
 			);
 			path = CryptoCoinsTests;
@@ -222,6 +227,7 @@
 		2EA60EFD2CC453DF00B480C5 /* CryptoCoinsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				2E6FFDA82CC7D3EA000272F0 /* CoinListView_UITests.swift */,
 				2EA60EFE2CC453DF00B480C5 /* CryptoCoinsUITests.swift */,
 				2EA60F002CC453DF00B480C5 /* CryptoCoinsUITestsLaunchTests.swift */,
 			);
@@ -406,15 +412,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E382AE32CC5F2A20042FC74 /* MockCoinDetailResponse.json in Resources */,
+				2E382AE32CC5F2A20042FC74 /* Mock_CoinDetailResponse.json in Resources */,
 				2E382ADA2CC5D84F0042FC74 /* Roboto-Bold.ttf in Resources */,
 				2E382ADB2CC5D84F0042FC74 /* Roboto-Italic.ttf in Resources */,
 				2E382ADC2CC5D84F0042FC74 /* Roboto-Light.ttf in Resources */,
 				2E382ADD2CC5D84F0042FC74 /* Roboto-Medium.ttf in Resources */,
 				2E382ADE2CC5D84F0042FC74 /* Roboto-Regular.ttf in Resources */,
 				2EA60EEB2CC453DF00B480C5 /* Preview Assets.xcassets in Resources */,
-				2E382AE72CC6091D0042FC74 /* MockCoinDetailResponse_PriceHistory.json in Resources */,
-				2E382ACB2CC5CFCD0042FC74 /* MockCoinsResponse.json in Resources */,
+				2E382AE72CC6091D0042FC74 /* Mock_CoinDetailResponse_PriceHistory.json in Resources */,
+				2E382ACB2CC5CFCD0042FC74 /* Mock_CoinsResponse.json in Resources */,
 				2EA60EE82CC453DF00B480C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA60EF52CC453DF00B480C5 /* CryptoCoinsTests.swift in Sources */,
+				2E6FFDA72CC7CF1D000272F0 /* CoinListViewModelTests.swift in Sources */,
 				2E636AC02CC74E380096777C /* MockCoinNetworkServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +507,7 @@
 			files = (
 				2EA60F012CC453DF00B480C5 /* CryptoCoinsUITestsLaunchTests.swift in Sources */,
 				2EA60EFF2CC453DF00B480C5 /* CryptoCoinsUITests.swift in Sources */,
+				2E6FFDA92CC7D3EA000272F0 /* CoinListView_UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

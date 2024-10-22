@@ -13,7 +13,7 @@ protocol SortOption {
     var order: Order { get set }
 }
 
-struct SortByRank: SortOption {
+struct SortByRank: Equatable, SortOption {
     var type: SortOptionType = .rank
     var title: String = "Rank"
     var order: Order = .unselected
