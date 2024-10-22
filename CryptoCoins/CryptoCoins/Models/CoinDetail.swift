@@ -18,7 +18,7 @@ struct CoinDetail: Equatable, Identifiable, Decodable {
     var high24H: String { marketData.high24H.usd.formattedAsShortCurrency() }
     var low24H: String { marketData.low24H.usd.formattedAsShortCurrency() }
     var priceChange24H: String { marketData.priceChange24H.formattedAsShortCurrency() }
-    var currentPrice: String { marketData.currentPrice.usd.formattedAsShortCurrency() }
+    var currentPrice: String { marketData.currentPrice.usd.formattedAsCurrency() }
     
     struct MarketData: Equatable, Decodable {
         let currentPrice: PriceByCurrency

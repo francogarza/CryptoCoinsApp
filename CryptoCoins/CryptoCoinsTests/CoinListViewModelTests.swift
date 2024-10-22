@@ -23,13 +23,12 @@ final class CoinListViewModelTests: XCTestCase {
     @MainActor func test_CoinListViewModel_didTapSort_doesInteractSuccessfully() {
         // Given
         guard let viewModel = viewModel else {
-            XCTFail()
+            XCTFail("Expected viewModel but found nil instead")
             return
         }
         
         // When
         var sortOptions = viewModel.sortOptions
-        let expectation = XCTestExpectation()
         
         viewModel.didTap(viewModel.selectedSort ?? SortByRank())
         
@@ -53,7 +52,7 @@ final class CoinListViewModelTests: XCTestCase {
     @MainActor func test_CoinListViewModel_sortCoins_doesSortSuccessfully() {
         // Given
         guard let viewModel = viewModel else {
-            XCTFail()
+            XCTFail("Expected viewModel but found nil instead")
             return
         }
         

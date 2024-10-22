@@ -19,11 +19,13 @@ class NetworkManager: APIService {
 
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
+                print("Endpoint error: \(error)")
                 completion(.failure(error))
                 return
             }
 
             guard let data = data else {
+                print("Error bad server response")
                 completion(.failure(URLError(.badServerResponse)))
                 return
             }
@@ -34,6 +36,7 @@ class NetworkManager: APIService {
                 let result = try decoder.decode(T.self, from: data)
                 completion(.success(result))
             } catch {
+                print("Error decoding JSON: \(error)")
                 completion(.failure(URLError(.cannotDecodeContentData)))
             }
         }.resume()

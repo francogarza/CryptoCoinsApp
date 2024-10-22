@@ -218,8 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				2EA60EF42CC453DF00B480C5 /* CryptoCoinsTests.swift */,
-				2E6FFDA62CC7CF1D000272F0 /* CoinListViewModelTests.swift */,
 				2E636ABF2CC74E380096777C /* MockCoinNetworkServiceTests.swift */,
+				2E6FFDA62CC7CF1D000272F0 /* CoinListViewModelTests.swift */,
 			);
 			path = CryptoCoinsTests;
 			sourceTree = "<group>";
@@ -227,9 +227,9 @@
 		2EA60EFD2CC453DF00B480C5 /* CryptoCoinsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2E6FFDA82CC7D3EA000272F0 /* CoinListView_UITests.swift */,
 				2EA60EFE2CC453DF00B480C5 /* CryptoCoinsUITests.swift */,
 				2EA60F002CC453DF00B480C5 /* CryptoCoinsUITestsLaunchTests.swift */,
+				2E6FFDA82CC7D3EA000272F0 /* CoinListView_UITests.swift */,
 			);
 			path = CryptoCoinsUITests;
 			sourceTree = "<group>";
