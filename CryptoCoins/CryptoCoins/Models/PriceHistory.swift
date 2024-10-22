@@ -15,10 +15,10 @@ struct PriceHistory: Decodable {
     let maxPrice: Double
     let color: Color
     let lastSevenDays: [Date] = {
-            let calendar = Calendar.current
-            let today = Date()
-            return (0...7).compactMap { calendar.date(byAdding: .day, value: -$0, to: today) }.reversed()
-        }()
+        let calendar = Calendar.current
+        let today = Date()
+        return (0...7).compactMap { calendar.date(byAdding: .day, value: -$0, to: today) }.reversed()
+    }()
     let yAxisValues: [Double]
     
     init(from decoder: Decoder) throws {
@@ -31,11 +31,9 @@ struct PriceHistory: Decodable {
         color = extractedPrices.first ?? 0 > extractedPrices.last ?? 0 ? .red : .green
         let step = abs(maxPrice - minPrice).rounded(.down) / 3
         yAxisValues = [minPrice, minPrice + step, minPrice + step + step, maxPrice]
-        
     }
     
     enum CodingKeys: String, CodingKey {
         case prices
     }
-
 }
