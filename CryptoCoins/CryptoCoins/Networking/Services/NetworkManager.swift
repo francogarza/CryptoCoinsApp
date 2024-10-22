@@ -13,18 +13,18 @@ class NetworkManager: APIService {
     /// - Parameter completion: A completion handler returning either a decoded object or an error.
     func performRequest<T>(endpoint: APIEndpoint, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
         guard let request = endpoint.buildURLRequest() else {
-            completion(.failure(NetworkError.invalidURL))
+            completion(.failure(URLError(.badURL)))
             return
         }
 
         URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
-                completion(.failure(NetworkError.networkError(error)))
+                completion(.failure(error))
                 return
             }
 
             guard let data = data else {
-                completion(.failure(NetworkError.noData))
+                completion(.failure(URLError(.badServerResponse)))
                 return
             }
 
@@ -34,7 +34,7 @@ class NetworkManager: APIService {
                 let result = try decoder.decode(T.self, from: data)
                 completion(.success(result))
             } catch {
-                completion(.failure(NetworkError.decodingFailed))
+                completion(.failure(URLError(.cannotDecodeContentData)))
             }
         }.resume()
     }

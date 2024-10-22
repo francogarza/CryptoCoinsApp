@@ -279,5 +279,5 @@ private extension CoinListView {
 }
 
 #Preview {
-    CoinListView(viewModel: CoinListView.ViewModel(coinService: MockCoinNetworkService()))
+    CoinListView(viewModel: CoinListView.ViewModel(coinService: MockCoinNetworkService(urlString: "MockCoinsResponse")))
 }

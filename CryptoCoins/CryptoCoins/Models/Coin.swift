@@ -10,7 +10,7 @@ import Foundation
 /// Represents a cryptocurrency coin with its key properties.
 ///
 /// The `Coin` struct conforms to `Identifiable` and `Decodable` protocols
-struct Coin: Identifiable, Decodable {
+struct Coin: Equatable, Identifiable, Decodable {
     let id: String
     let symbol: String
     let name: String

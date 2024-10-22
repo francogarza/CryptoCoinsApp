@@ -30,7 +30,7 @@ extension CoinListView {
         
         init(coinService: CoinService) {
             self.coinService = coinService
-            sortOptions = [SortByRank(), SortByPrice(), SortByAlphabetically()]
+            sortOptions = [SortByRank(order: .ascending), SortByPrice(), SortByAlphabetically()]
             fetchCoins()
         }
         
