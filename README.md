@@ -64,5 +64,5 @@ While I have read about these features, this is my first time researching and ap
 - **Network Layer**: [How to create a network layer for your iOS app](https://sabapathy7.medium.com/how-to-create-a-network-layer-for-your-ios-app-623f99161677)
 - **HackingWithSwift**: [HackingWithSwift webside]https://www.hackingwithswift.com
 - **SwiftfulThinking**: [SwiftulThinking youtube link]https://www.youtube.com/@SwiftfulThinking
-- **Font**: [SwiftUI custom fonts](https://codewithchris.com/swiftui-custom-fonts/#:~:text=Setting%20up,-To%20add%20a&text=Choose%20the%20font%20that%20you,and%20check%20Add%20to%20targets.)
-- **Icon**: [Ethereum icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/ethereum)
+- **Font**: [SwiftUI custom fonts]https://codewithchris.com/swiftui-custom-fonts/#:~:text=Setting%20up,-To%20add%20a&text=Choose%20the%20font%20that%20you,and%20check%20Add%20to%20targets.
+- **Icon**: [Ethereum icons created by Freepik - Flaticon]https://www.flaticon.com/free-icons/ethereum
