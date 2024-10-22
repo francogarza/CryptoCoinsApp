@@ -43,13 +43,16 @@ While I have read about these features, this is my first time researching and ap
 ## Notes 
 - **What I Learned**:
   - The focus and purpose of unit testing is to ensure component reliability.
+  - The Coordinator pattern helps with separation of concerns, which helps with scalability.
+  - UI testing is usefull for catching regression bugs and reduces manual testing.
   
 - **Extras Not in Roadmap**:
   - Sort the coin list by different options.
   - Custom swipe-back gesture for navigation.
   - Color theme suitable for both light and dark mode.
   - Empty state for search function.
-  - Network error state with a "try again" option when an endpoint fails.
+  - Network error state with a "try again" option when an endpoint fails
+  - QA target for testing that uses a mock network service 
 
 - **Decisions During Development**:
   - No external third-party libraries were needed due to the scope of the project. This helps eliminate the need to depend on third-party library compatibility over time. If the scope included user authentication, a third-party library would almost certainly be needed.
